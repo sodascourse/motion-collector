@@ -88,10 +88,15 @@ class DataDisplayViewController: UITableViewController {
                 self.collectingTimer =
                     NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: selector,
                                                            userInfo: nil, repeats: true)
+                // Create database
+                let databaseFileName = String(self.startCollectingDate!.timeIntervalSince1970)
+                self.databaseManager = DatabaseManager(fileName: databaseFileName)
                 // Go
                 MotionManager.sharedInstance.startAccelerometerUpdates()
             } else {
                 MotionManager.sharedInstance.stopAccelerometerUpdates()
+
+                self.databaseManager = nil
 
                 self.triggerButtonItem.title = "Start"
 
@@ -104,6 +109,8 @@ class DataDisplayViewController: UITableViewController {
             }
         }
     }
+
+    var databaseManager: DatabaseManager?
 
     @IBAction func dataCollectorTrigger(sender: AnyObject) {
         self.collectingData = !self.collectingData
@@ -158,6 +165,9 @@ class DataDisplayViewController: UITableViewController {
         if let data = notification.userInfo?[MotionManager.accelerometerUserInfoKey] as? CMAccelerometerData {
             let acceleration = data.acceleration
             self.updateXYZLabels(xValue: acceleration.x, yValue: acceleration.y, zValue: acceleration.z)
+            self.databaseManager?.addAccelerometerData(xValue: acceleration.x,
+                                                       yValue: acceleration.y,
+                                                       zValue: acceleration.z)
         }
     }
 }
