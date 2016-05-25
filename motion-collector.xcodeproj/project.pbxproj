@@ -13,6 +13,8 @@
 		FEB5CBB31CF5F92C000D73CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB5CBB21CF5F92C000D73CB /* Assets.xcassets */; };
 		FEB5CBB61CF5F92C000D73CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEB5CBB41CF5F92C000D73CB /* LaunchScreen.storyboard */; };
 		FEB5CBBF1CF5FD7E000D73CB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB5CBBE1CF5FD7E000D73CB /* CoreMotion.framework */; };
+		FEB5CBC11CF5FE14000D73CB /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5CBC01CF5FE14000D73CB /* MotionManager.swift */; };
+		FEB5CBC31CF6109C000D73CB /* DataDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5CBC21CF6109C000D73CB /* DataDisplayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FEB5CBB51CF5F92C000D73CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEB5CBB71CF5F92C000D73CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEB5CBBE1CF5FD7E000D73CB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		FEB5CBC01CF5FE14000D73CB /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		FEB5CBC21CF6109C000D73CB /* DataDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDisplayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				FEB5CBAB1CF5F92C000D73CB /* AppDelegate.swift */,
+				FEB5CBC01CF5FE14000D73CB /* MotionManager.swift */,
+				FEB5CBC21CF6109C000D73CB /* DataDisplayViewController.swift */,
 				FEB5CBAF1CF5F92C000D73CB /* Main.storyboard */,
 				FEB5CBB21CF5F92C000D73CB /* Assets.xcassets */,
 				FEB5CBB41CF5F92C000D73CB /* LaunchScreen.storyboard */,
@@ -125,6 +131,7 @@
 				TargetAttributes = {
 					FEB5CBA71CF5F92B000D73CB = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = KPFF548763;
 					};
 				};
 			};
@@ -228,6 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEB5CBAC1CF5F92C000D73CB /* AppDelegate.swift in Sources */,
+				FEB5CBC31CF6109C000D73CB /* DataDisplayViewController.swift in Sources */,
+				FEB5CBC11CF5FE14000D73CB /* MotionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,11 +352,14 @@
 			baseConfigurationReference = E6B29D3F38770C8A111C8F7B /* Pods-motion-collector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "motion-collector/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.sodas.motion-collector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -356,11 +368,14 @@
 			baseConfigurationReference = B1FB4138CDE82D27A20914FB /* Pods-motion-collector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "motion-collector/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.sodas.motion-collector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
