@@ -15,7 +15,7 @@
 		FEB5CBBF1CF5FD7E000D73CB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB5CBBE1CF5FD7E000D73CB /* CoreMotion.framework */; };
 		FEB5CBC11CF5FE14000D73CB /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5CBC01CF5FE14000D73CB /* MotionManager.swift */; };
 		FEB5CBC31CF6109C000D73CB /* DataDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5CBC21CF6109C000D73CB /* DataDisplayViewController.swift */; };
-		FEB5CBC51CF620B1000D73CB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5CBC41CF620B1000D73CB /* DatabaseManager.swift */; };
+		FEB5CBC51CF620B1000D73CB /* DataCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5CBC41CF620B1000D73CB /* DataCollector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		FEB5CBBE1CF5FD7E000D73CB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		FEB5CBC01CF5FE14000D73CB /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		FEB5CBC21CF6109C000D73CB /* DataDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDisplayViewController.swift; sourceTree = "<group>"; };
-		FEB5CBC41CF620B1000D73CB /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		FEB5CBC41CF620B1000D73CB /* DataCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCollector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 				FEB5CBAB1CF5F92C000D73CB /* AppDelegate.swift */,
 				FEB5CBC01CF5FE14000D73CB /* MotionManager.swift */,
 				FEB5CBC21CF6109C000D73CB /* DataDisplayViewController.swift */,
-				FEB5CBC41CF620B1000D73CB /* DatabaseManager.swift */,
+				FEB5CBC41CF620B1000D73CB /* DataCollector.swift */,
 				FEB5CBAF1CF5F92C000D73CB /* Main.storyboard */,
 				FEB5CBB21CF5F92C000D73CB /* Assets.xcassets */,
 				FEB5CBB41CF5F92C000D73CB /* LaunchScreen.storyboard */,
@@ -237,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEB5CBC51CF620B1000D73CB /* DatabaseManager.swift in Sources */,
+				FEB5CBC51CF620B1000D73CB /* DataCollector.swift in Sources */,
 				FEB5CBAC1CF5F92C000D73CB /* AppDelegate.swift in Sources */,
 				FEB5CBC31CF6109C000D73CB /* DataDisplayViewController.swift in Sources */,
 				FEB5CBC11CF5FE14000D73CB /* MotionManager.swift in Sources */,

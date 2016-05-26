@@ -1,5 +1,5 @@
 //
-//  DatabaseManager.swift
+//  DataCollector.swift
 //  motion-collector
 //
 //  Copyright 2016 Tien-Che Tsai
@@ -21,6 +21,14 @@ import Foundation
 import Async
 import SQLite
 
+protocol DataCollector {
+    init(fileName: String)
+
+    func addAccelerometerData(xValue xValue: Double, yValue: Double, zValue: Double)
+}
+
+// Database ------------------------------------------------------------------------------------------------------------
+
 struct AccelerometerTable {
     static let table = Table("accelerometer")
     static let itemId = Expression<Int64>("id")
@@ -30,7 +38,7 @@ struct AccelerometerTable {
     static let timestamp = Expression<Double>("timestamp")
 }
 
-class DatabaseManager {
+struct DatabaseManager: DataCollector {
 
     let fileName: String
     var filePath: String {
@@ -58,7 +66,7 @@ class DatabaseManager {
         Async.customQueue(self.dispatchQueue, block: closure)
     }
 
-    private func openDatabase() {
+    private mutating func openDatabase() {
         self.performOnDispatchQueue {
             do {
                 self.databaseConnection = try Connection(self.filePath)
