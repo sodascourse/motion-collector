@@ -5,9 +5,6 @@
       location = "container:motion-collector.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:motion-collector.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
