@@ -227,7 +227,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "which swiftlint > /dev/null && swiftlint";
+			shellScript = "which swiftlint > /dev/null && swiftlint || true";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
